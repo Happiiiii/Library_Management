@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4" *ngFor=" let card of bookContent" style="margin-top: 30px;">
+      <div class="card h-100"style="border:1px solid black">
+        <div class="card-body">
+          <div class="card-title" style="align-content: center;text-align: center;">
+              <h3>{{ card.bookName }}</h3>
+              <h4>{{ card.authorName }}</h4>
+              <h6>{{ card.editions }}</h6>
+              <!-- <h6>{{ card.id }}</h6> -->
+          </div>
+          <p class="card-description">{{ card.description }}</p>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container-fluid" style="margin-top: 25px;">
+  <form [formGroup] = "Data" (submit) = "submitData()">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label for="">Book Name</label>
+          <input type="text" class="form-control" formControlName="bookName"  placeholder="Enter Book Name"/>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label for="">Author Name</label>
+          <input type="text" class="form-control" formControlName="authorName" placeholder="Enter Author Name"/>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label for="">Edition</label>
+          <input type="text" class="form-control" formControlName="editions" placeholder="Enter Edition" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <label for="">Description</label>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          class="form-control"
+          formControlName="Description"
+        ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" style="margin-top: 25px;" routerLink="../list">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

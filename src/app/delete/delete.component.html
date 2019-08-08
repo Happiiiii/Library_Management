@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col md 12">
+    <div class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">BookName</th>
+          <th scope="col">AuthorName</th>
+          <th scope="col">Editions</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let card of deletes; let i=index'>
+            <th scope="row">{{i+1}}</th>
+            <td>{{ card.bookName }}</td>
+            <td>{{ card.authorName }}</td>
+            <td>{{ card.editions }}</td>
+            <!-- <td>
+              <div>
+                <img class="card-img-top" [src]="card.coverImage" alt=""/>
+              </div>
+            </td> -->
+            <div>
+                <a routerLink="../edit/{{card.id}}" class="btn btn-primary" style="margin-left: 115px">Edit</a>
+
+                <button  (click)="deleteBook(card.id)" class="btn btn-danger" style="margin-left: 50px">Delete </button>
+            </div>
+
+          </tr>
+        </tbody>
+    </div>
+
+    </div>
+  </div>
+</div>
